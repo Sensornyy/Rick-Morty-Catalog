@@ -4,10 +4,10 @@ import 'package:equatable/equatable.dart';
 import 'package:rickmorty/core/error/failure.dart';
 import 'package:rickmorty/core/use_cases/use_case.dart';
 import 'package:rickmorty/features/domain/entities/character_entity.dart';
-import 'package:rickmorty/features/domain/repositories/character_repositories/searcher_repository.dart';
+import 'package:rickmorty/features/domain/repository/character_repository.dart';
 
 class Searcher extends UseCase<List<CharacterEntity>, SearchCharacterParams> {
-  final SearcherRepository searcherRepository;
+  final CharacterRepository searcherRepository;
 
   Searcher(this.searcherRepository);
 
