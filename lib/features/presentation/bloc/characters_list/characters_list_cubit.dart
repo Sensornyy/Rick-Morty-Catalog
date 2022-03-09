@@ -30,7 +30,7 @@ class CharactersListCubit extends Cubit<CharactersListState> {
 
     final responseFromRepository = await loader(PageCharacterParams(page: page));
     responseFromRepository.fold(
-      (failure) => CharactersListError(errorMessage: reportFailure(failure)),
+      (failure) => emit( CharactersListError(errorMessage: reportFailure(failure))),
       (character) {
         page++;
         final characters = (state as CharactersListLoading).oldCharacterList;

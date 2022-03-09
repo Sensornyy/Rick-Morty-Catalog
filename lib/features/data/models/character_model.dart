@@ -37,7 +37,7 @@ class CharacterModel extends CharacterEntity {
       origin: LocationModel.fromJson(json['origin']),
       location: LocationModel.fromJson(json['location']),
       image: json['image'],
-      episode: (json['episode'] as List<dynamic>).map((e) => e as String).toList,
+      episode: (json['episode'] as List<dynamic>).map((e) => e as String).toList(),
     );
   }
 
