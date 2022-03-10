@@ -6,7 +6,9 @@ import 'package:rickmorty/features/presentation/pages/home_page.dart' ;
 import 'package:rickmorty/features/presentation/bloc/characters_list/characters_list_cubit.dart';
 import 'package:rickmorty/features/presentation/widgets/loading_indicator.dart';
 import 'characters_grid.dart';
-import 'error_message.dart';
+import 'server_error_message.dart';
+import 'loading_characters.dart';
+import 'loading_grid.dart';
 
 class CharactersClass extends StatelessWidget {
 
@@ -31,14 +33,14 @@ class CharactersClass extends StatelessWidget {
       bool isLoading = false;
 
       if (state is CharactersListLoading && state.isFirstFetch) {
-        return LoadingIndicator();
+        return LoadingGrid();
       } else if (state is CharactersListLoading) {
         characters = state.oldCharacterList;
         isLoading = true;
       } else if (state is CharactersListLoaded) {
         characters = state.characterList;
       } else if (state is CharactersListError) {
-        return ErrorMessage(errorMessage: state.errorMessage);
+        return ServerErrorMessage(errorMessage: state.errorMessage);
       }
       return CharactersView(isLoading: isLoading, characters: characters,);
     });

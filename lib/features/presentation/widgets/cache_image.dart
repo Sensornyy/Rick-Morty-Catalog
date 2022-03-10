@@ -5,18 +5,25 @@ import 'package:shimmer/shimmer.dart';
 class CacheImage extends StatelessWidget {
   final String imageUrl;
   final double height, width;
+  final bool isRounded;
 
-  const CacheImage({Key? key, required this.width, required this.height, required this.imageUrl})
+  const CacheImage(
+      {Key? key,
+      required this.width,
+      required this.height,
+      required this.imageUrl,
+      this.isRounded = false})
       : super(key: key);
 
   Widget _imageWidget(ImageProvider imageProvider) {
-    //
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(10),
-          topRight: Radius.circular(10),
-        ),
+        borderRadius: isRounded
+            ? BorderRadius.circular(10)
+            : BorderRadius.only(
+                topLeft: Radius.circular(10),
+                topRight: Radius.circular(10),
+              ),
         image: DecorationImage(
           image: imageProvider,
           fit: BoxFit.cover,

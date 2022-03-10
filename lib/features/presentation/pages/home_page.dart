@@ -3,6 +3,7 @@ import 'package:rickmorty/common/app_colors.dart';
 
 import 'package:rickmorty/features/presentation/widgets/characters.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rickmorty/features/presentation/widgets/custom_search_delegate.dart';
 import 'package:rickmorty/features/presentation/widgets/custom_sliver_app_bar.dart';
 
 final ScrollController scrollController = ScrollController();
@@ -16,8 +17,10 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColors.mainBackground,
         child: const Icon(Icons.search, color: Colors.white),
-        onPressed: () {},
         mini: true,
+        onPressed: () {
+          showSearch(context: context, delegate: CustomSearchDelegate());
+        },
       ),
       body: CustomScrollView(
         controller: scrollController,

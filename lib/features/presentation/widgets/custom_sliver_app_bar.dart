@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:rickmorty/common/app_colors.dart';
+import 'package:rickmorty/common/text.dart';
 
 class CustomSliverAppBar extends SliverPersistentHeaderDelegate {
   final double expandedHeight;
@@ -33,7 +34,7 @@ class CustomSliverAppBar extends SliverPersistentHeaderDelegate {
               children: [
                 Text(
                   'Rick & Morty Catalog',
-                  style: Theme.of(context).textTheme.caption,
+                  style: AppTextStyle.headline,
                 ),
               ],
             ),

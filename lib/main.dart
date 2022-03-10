@@ -32,11 +32,6 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
-          textTheme: TextTheme(caption: TextStyle(fontFamily: 'Roboto Slab', fontSize:  22, fontWeight: FontWeight.bold),
-          bodyText1: TextStyle(fontFamily: 'Roboto Slab', fontSize: 19, fontWeight: FontWeight.normal),
-          bodyText2: TextStyle(fontFamily: 'Roboto Slab', fontSize: 12, fontWeight: FontWeight.normal),
-          subtitle1: TextStyle(fontFamily: 'Roboto Slab', fontSize: 12, fontWeight: FontWeight.normal, color: Colors.grey)
-          ),
           backgroundColor: AppColors.mainBackground,
           scaffoldBackgroundColor: AppColors.mainBackground,
         ),
