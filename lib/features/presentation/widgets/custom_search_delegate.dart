@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:rickmorty/common/app_colors.dart';
 import 'package:rickmorty/common/text.dart';
 import 'package:rickmorty/features/domain/entities/character_entity.dart';
@@ -44,13 +45,26 @@ class CustomSearchDelegate extends SearchDelegate {
           return Shimmer.fromColors(
             baseColor: AppColors.cellBackground,
             highlightColor: Colors.grey[600]!,
-            child: Container(
-              height: 90,
-              width: 40,
-              decoration: BoxDecoration(
-                color: Colors.grey,
-                borderRadius: BorderRadius.circular(10),
-              ),
+            child: Column(
+              children: [
+                Container(
+                  height: 250,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  height: 250,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ],
             ),
           );
         } else if (state is SearchLoaded) {
@@ -64,7 +78,7 @@ class CustomSearchDelegate extends SearchDelegate {
               CharacterEntity characterResult = character[index];
               return SearchResult(characterResult: characterResult,);
             });
-        } else if (state is SearchError) {
+        } else if (state is SearchError ) {
           return SearchErrorMessage(errorMessage: state.errorMessage);
         } else {
           return Center(

@@ -1,12 +1,8 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:rickmorty/common/app_colors.dart';
-import 'package:rickmorty/features/domain/entities/character_entity.dart';
-import 'package:rickmorty/features/presentation/pages/home_page.dart';
 import 'package:shimmer/shimmer.dart';
 
+import 'package:flutter/widgets.dart';
+import 'package:rickmorty/common/app_colors.dart';
 
 class LoadingGrid extends StatelessWidget {
   @override

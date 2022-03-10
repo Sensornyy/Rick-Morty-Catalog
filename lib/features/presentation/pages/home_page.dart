@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:rickmorty/common/app_colors.dart';
 
 import 'package:rickmorty/features/presentation/widgets/characters.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rickmorty/features/presentation/widgets/custom_search_delegate.dart';
 import 'package:rickmorty/features/presentation/widgets/custom_sliver_app_bar.dart';
 

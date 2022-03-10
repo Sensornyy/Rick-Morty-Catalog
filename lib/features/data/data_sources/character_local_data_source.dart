@@ -1,11 +1,16 @@
 import 'dart:convert';
 
-import 'package:rickmorty/core/error/exception.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:rickmorty/core/error/exception.dart';
 import 'package:rickmorty/features/data/models/character_model.dart';
 
 abstract class CharacterLocalDataSource {
+  /// Gets the cached [List<CharacterModel>] which was gotten the last time
+  /// the user had an Internet connection.
+  ///
+  /// Throws [CacheException] if no cached data is present.
+  ///
   Future<List<CharacterModel>> getCharacterFromCache();
 
   Future<void> charactersToCache(List<CharacterModel> characters);

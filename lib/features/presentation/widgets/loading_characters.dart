@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rickmorty/common/app_colors.dart';
 import 'package:shimmer/shimmer.dart';
+
+import 'package:rickmorty/common/app_colors.dart';
 
 class LoadingCharacters extends StatelessWidget {
   const LoadingCharacters({Key? key}) : super(key: key);

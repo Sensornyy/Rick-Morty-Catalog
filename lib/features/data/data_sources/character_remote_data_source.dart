@@ -6,6 +6,11 @@ import 'package:rickmorty/core/error/exception.dart';
 import 'package:rickmorty/features/data/models/character_model.dart';
 
 abstract class CharacterRemoteDataSource {
+  /// Method [searchCharacter] and method [loadAllCharacters] have almost the same code base.
+  /// Gets the [List<CharacterModel>] via API if phone has an Internet connection.
+  ///
+  /// Throws [ServerException] if something went wrong.
+  ///
   Future<List<CharacterModel>> searchCharacter(String name);
 
   Future<List<CharacterModel>> loadAllCharacters(int page);

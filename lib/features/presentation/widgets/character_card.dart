@@ -1,13 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'cache_image.dart';
 import 'package:rickmorty/common/app_colors.dart';
 import 'package:rickmorty/common/text.dart';
 import 'package:rickmorty/features/domain/entities/character_entity.dart';
-import 'package:rickmorty/features/presentation/bloc/characters_list/characters_list_cubit.dart';
 import 'package:rickmorty/features/presentation/pages/character_details.dart';
 import 'package:rickmorty/common/slide_transition.dart';
-
-import 'cache_image.dart';
 
 class CharacterCard extends StatelessWidget {
   final CharacterEntity character;

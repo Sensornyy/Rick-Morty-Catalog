@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+
 import 'package:rickmorty/common/app_colors.dart';
 import 'package:rickmorty/common/text.dart';
 

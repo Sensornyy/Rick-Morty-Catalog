@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:rickmorty/features/domain/entities/character_entity.dart';
-import 'package:rickmorty/features/presentation/pages/home_page.dart';
-import 'package:shimmer/shimmer.dart';
 
 import 'character_card.dart';
 import 'loading_characters.dart';
+import 'package:flutter/widgets.dart';
+import 'package:rickmorty/features/domain/entities/character_entity.dart';
+import 'package:rickmorty/features/presentation/pages/home_page.dart';
+
 
 class CharactersView extends StatelessWidget {
   List<CharacterEntity> characters;

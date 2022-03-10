@@ -16,6 +16,7 @@ class CharactersListCubit extends Cubit<CharactersListState> {
 
   Future<void> loadCharacters() async {
     final currentState = state;
+
     var oldCharacterList = <CharacterEntity>[];
 
     if (currentState is CharactersListLoading) {
@@ -32,16 +33,13 @@ class CharactersListCubit extends Cubit<CharactersListState> {
     responseFromRepository.fold(
       (failure) => emit( CharactersListError(errorMessage: reportFailure(failure))),
       (character) {
-        if (page<34) {
           page++;
-        }
         final characters = (state as CharactersListLoading).oldCharacterList;
         characters.addAll(character);
-        if(page < 34) {
           emit(
             CharactersListLoaded(characters),
+
           );
-        }
       },
     );
   }

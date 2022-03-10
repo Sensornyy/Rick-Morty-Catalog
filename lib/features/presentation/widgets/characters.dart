@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rickmorty/features/domain/entities/character_entity.dart';
 
+import 'characters_grid.dart';
+import 'loading_grid.dart';
+import 'server_error_message.dart';
+import 'package:rickmorty/features/domain/entities/character_entity.dart';
 import 'package:rickmorty/features/presentation/pages/home_page.dart' ;
 import 'package:rickmorty/features/presentation/bloc/characters_list/characters_list_cubit.dart';
-import 'package:rickmorty/features/presentation/widgets/loading_indicator.dart';
-import 'characters_grid.dart';
-import 'server_error_message.dart';
-import 'loading_characters.dart';
-import 'loading_grid.dart';
 
 class CharactersClass extends StatelessWidget {
-
 
   void setupScrollController(BuildContext context) {
     scrollController.addListener(() {

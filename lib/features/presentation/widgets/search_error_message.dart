@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:rickmorty/common/text.dart';
 
 class SearchErrorMessage extends StatelessWidget {
